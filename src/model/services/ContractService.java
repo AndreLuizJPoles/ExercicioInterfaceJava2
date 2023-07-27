@@ -16,7 +16,7 @@ public class ContractService {
         return service;
     }
 
-    public void setService(OnlinePaymentService service) {
+    public void setService(OnlinePaymentService service){
         this.service = service;
     }
 

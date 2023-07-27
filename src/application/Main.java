@@ -6,6 +6,7 @@ import model.services.PaypalService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -35,7 +36,10 @@ public class Main {
             contract.printInstallments();
         }
         catch(InputMismatchException e){
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Erro: entrada invalida");
+        }
+        catch(DateTimeParseException e){
+            System.out.println("Erro: formatacao de data invalida");
         }
         finally {
             sc.close();
